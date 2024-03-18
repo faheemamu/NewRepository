@@ -1,0 +1,26 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>todo</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>todo</servlet-name>
+		<url-pattern>/</url-pattern>
+
+		<multipart-config>
+			<max-file-size>2097152</max-file-size> <!-- 2 MB -->
+			<max-request-size>4194304</max-request-size> <!-- 4 MB -->
+			<file-size-threshold>0</file-size-threshold>
+		</multipart-config>
+
+	</servlet-mapping>
+
+</web-app>
